@@ -1,0 +1,278 @@
+html {
+  box-sizing: border-box;
+  background-image: url(img/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a, ul {
+  text-decoration: none;
+  color: #08a6af;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: black;
+  height: 70px;
+  width: 100%;
+  border-bottom: 5px solid #f8f200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 40px;
+  position: relative;
+}
+
+.nav li:last-child {
+  margin-right: 0;
+}
+
+/* Стили для элементов меню с эффектом */
+.nav li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #08a6af;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav li a:hover {
+  color: #cce9eb;
+  transform: scale(1.1); /* Увеличение размера текста при наведении */
+}
+
+/* Эффект глича для навигации */
+.nav li a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00dbf8;
+  color: black;
+  overflow: hidden;
+  z-index: -1;
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(-10px, 0) skewX(-5deg);
+    opacity: 0.7;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  10% {
+    transform: translate(10px, 0) skewX(5deg);
+    opacity: 0.9;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  20% {
+    transform: translate(-15px, 0) skewX(-7deg);
+    opacity: 0.6;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  30% {
+    transform: translate(15px, 0) skewX(7deg);
+    opacity: 1;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  40% {
+    transform: translate(-20px, 0) skewX(-10deg);
+    opacity: 0.5;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  50% {
+    transform: translate(20px, 0) skewX(10deg);
+    opacity: 0.8;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  60% {
+    transform: translate(-10px, 0) skewX(-5deg);
+    opacity: 0.7;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  70% {
+    transform: translate(10px, 0) skewX(5deg);
+    opacity: 1;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  80% {
+    transform: translate(-15px, 0) skewX(-7deg);
+    opacity: 0.9;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  90% {
+    transform: translate(15px, 0) skewX(7deg);
+    opacity: 0.6;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+  100% {
+    transform: translate(0, 0) skewX(0deg);
+    opacity: 0.7;
+    background: linear-gradient(45deg, #60b9e0, #df58e2);
+  }
+}
+
+.about{
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.about h1{
+  padding-top: 150px;
+  font-size: 250px;
+  color: #f8f200;
+}
+
+.about h4 {
+  height: 150px;
+  font-size: 50px;
+  background-color: #f8f200;
+  padding-top: 20px;
+  text-align: center;
+  clip-path: polygon(0 8%, 89% 0, 100% 35%, 90% 63%, 100% 88%, 0 79%, 5% 51%, 0 31%);
+}
+
+/* Стиль для меню */
+.menu {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px, 25%, 40px, 25%;
+}
+
+.menu .menu_item {
+  margin-right: 0px;
+}
+
+.menu_item:hover {
+  color: #cce9eb;
+  transition: 0.5ms;
+}
+
+/* Стили для блока "Обо мне" */
+.inf_bx {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+}
+
+.info_box {
+  width: 50%;
+  height: auto;
+  background-color: #f8f200; /* Цвет фона для блока информации */
+  margin: 0; /* Убираем любые внешние отступы у .info_box */
+}
+
+.info_box h1 {
+  padding: 20px;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.info_box h4 {
+  padding: 20px;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.img_me {
+  margin: 25px;
+  width: 40%; 
+  height: auto; 
+  border: 12px solid transparent; 
+  border-image: linear-gradient(to right, #60b9e0, #df58e2) 1; 
+  background-image: url('/static/img/me.png');
+  background-repeat: no-repeat; 
+  background-size: contain;
+  background-position: center;
+}
+.space{
+  width: 100%;
+  height: auto;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.skils{
+  display: flex;
+  justify-content: center;
+}
+
+.skils_about{
+  color: #00dbf8;
+  font-size: 20px;
+  width: 60%;
+  height: auto;
+}
+
+.skils_about h1{
+  padding: 20px;
+  justify-content: center;
+  color: #00dbf8;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.skils_about h4{
+  max-width: 550px;
+  padding-left: 15px;
+}
+
+.skils_img{
+  width: 40%; 
+  height: auto;
+  border: 12px solid transparent; 
+  border-image: linear-gradient(to left, #60b9e0, #df58e2) 1; 
+  background-image: url('/static/img/card.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
+}
